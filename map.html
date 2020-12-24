@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="pup_map.css">
+	<script language = "JavaScript" type = "text/javascript" src = "pupmap.js"></script>
+	<title>HTML Map Activity</title>
+</head>
+<body>
+	<div id=header>
+	<strong><p>POLYTECHNIC UNIVERSITY OF THE PHILIPPINES</p></strong>
+	</div>
+	<div id="container">
+		<h1 style="font-family: Lucida Console; font-size: 30px; color: #E5E7E9">CLICK ON THE MAP TO KNOW THE DETAILS</h1>
+		<img src="pup_kiosk.jpg" alt="pup_kiosk" usemap="#pupmap" width="566" height="425">
+		<map name="pupmap">
+			<area 	id="chapel" 
+					shape="circle" 
+					coords="278,336,43" 
+					alt="Interfaith Chapel" 
+					href="#" 
+					onmouseover="showModal('Interfaith Chapel', 'chapel.jpg', 'The ecumenical chapel (known as the Interfaith Chapel) is a nondenominational Christian church located inside the PUP - A. Mabini Campus.')"
+					onmouseout="hideModal()"/>
+			<area 	id="oval" 
+					shape="poly" 
+					coords="353,313,355,350,380,378,402,384,421,384,441,374,438,375,447,369,453,362,468,340,489,309,500,284,500,263,496,253,488,240,478,231,461,223,438,221,420,226,405,235,352,315" 
+					alt="Oval Open Field" 
+					href="#" 
+					onmouseover="showModal('Oval Open Field', 'oval.jpg','PUP Oval is an area inside the PUP campus wherein sports activities and big events are being held.')"
+					onmouseout="hideModal()"/>
+			<area 	id="grandstand" 
+					shape="poly" 
+					coords="361,292,394,245,384,240,351,285" 
+					alt="Grandstand" 
+					href="#"
+					onmouseover="showModal('Grandstand', 'grandstand.jpg','PUP The grandstand is a multipurpose stage located inside the PUP oval. Concerts, Recreational Activities, Spoken Poetries, etc takes place.')"
+					onmouseout="hideModal()"/>
+			<area 	id="obelisk" 
+					shape="circle" 
+					coords="321,187,14" 
+					alt="PUP Obelisk (and the Mabini Monument)" 
+					href="#"
+					onmouseover="showModal('Obelisk', 'obelisk.jpg','The Obelisk, standing majestic on its base, depicts the strength of the Polytechnic University of the Philippines as an institution of higher learning, promoting educational and moral aims which are fortified by a determined leadership with a clear vision for the Filipino youth and an efficient support system inspired by the virtues of public service. On top is the University Star Logo , symbol of PUP’s image as the Light of the Nation. The obelisk stands here and now as an emblem of strength and greatness that only time can change.')"
+					onmouseout="hideModal()"/>
+			<area 	id="north" 
+					shape="poly" 
+					coords="233,292,288,264,285,257,287,255,283,251,287,248,282,237,276,241,273,237,219,268,231,293" 
+					alt="Main Building - North Wing" 
+					href="#"
+					onmouseover="showModal('North Wing', 'north_wing.jpg','This is the frontal part of PUP Main Building where the PUP flag can also be seen. It is the view that you will see when having a morning ceremony. It is also where our department office (CCIS Office) is located.')"
+					onmouseout="hideModal()"/>
+		</map>
+	</div>
+	
+		<div id="myModal" class="modal">
+            <div class="modal_content">
+                <div class="modal-caption">
+                    <h2 id="names"></h2>
+                </div>
+                <div class="modal-img">
+                        <img id = "pics" src="" width="450" height="400" alt="picsur" style="border: 5px solid; border-color: #E8C908" >
+                </div>
+                <div class="modal-desc">
+                    <p id ="desc"></p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
